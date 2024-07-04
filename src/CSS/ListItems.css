@@ -1,0 +1,91 @@
+ul {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0 20vw 5vh;
+    padding: 1vh 1vw;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);  
+}
+
+ul:not(:empty) {
+    box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.8);
+}
+
+li {
+    list-style-type: none;
+    background-color: #fff;
+    margin: 0.5rem 0 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 0.5s ease-in-out;
+    border-radius: 0.5rem;
+}
+
+li input[type="checkbox"] {
+    appearance: none;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked::before {
+    content: "✔";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: #37ff00;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+li input[type="checkbox"]:checked+label {
+    text-decoration: line-through;
+    cursor: pointer;
+}
+
+li label {
+    block-size: 2rem;
+    padding: 0.5rem ;
+    flex-grow: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid rgba(128, 128, 128, 0.553);
+    border-right: 1px solid rgba(128, 128, 128, 0.553);
+}
+li label:hover {
+    background-color: rgba(128, 128, 128, 0.2);
+}
+
+li svg {
+    cursor: pointer;
+    height: 2rem;
+    width: 5rem;
+    stroke-width: 0;
+}
+
+li svg:hover {
+    background-color: red;
+    border-radius: 0 0.5rem 0.5rem 0;
+    color: white;
+}
+
+@media (max-width : 600px) {
+    ul {
+        margin: 0 5vw;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

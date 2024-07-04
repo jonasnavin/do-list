@@ -1,0 +1,11 @@
+main {
+    width: 100vw;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+p {    
+    margin-top: 5vh;
+    text-align: center;
+}

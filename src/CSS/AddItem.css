@@ -1,0 +1,63 @@
+.addItem {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin: 5vh 15% 0 15%;
+}
+
+.addItem input {
+    width: 50%;
+    height: 2rem !important;
+    border-radius: 1rem 0 0 5px;
+    outline: none;
+    border: none;
+    background-color: #0094e94d;
+    padding: 0.5rem;
+    block-size: 1.5rem;
+}
+
+.addItem input:focus {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.548);
+    border-right: none;
+}
+
+.addItem input:focus + button {
+    background-color: white;
+    color: green;
+    border: 1px solid rgba(0, 0, 0, 0.548);
+    border-left: none;
+}
+
+.addItem input:focus + button:hover {
+    background-color: green;
+    color: white;    
+}
+.addItem label {
+    display: none;
+}
+
+.addItem button {
+    width: 10%;
+    background-color: #0094e94d;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border-radius: 0 0.3rem 0.3rem 0;
+}
+
+.addItem button:hover {
+    background-color: green;
+    color: white;
+}
+
+@media (max-width : 600px) {
+    .addItem {
+        width: 100%;
+        margin: 5vh 0 5vh 0;
+    }
+}
